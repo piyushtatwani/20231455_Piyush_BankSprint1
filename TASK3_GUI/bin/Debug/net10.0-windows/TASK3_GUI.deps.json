@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "TASK3_GUI/1.0.0": {
+        "dependencies": {
+          "20231455_Piyush_BankSprint1": "1.0.0"
+        },
+        "runtime": {
+          "TASK3_GUI.dll": {}
+        }
+      },
+      "20231455_Piyush_BankSprint1/1.0.0": {
+        "runtime": {
+          "20231455_Piyush_BankSprint1.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TASK3_GUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "20231455_Piyush_BankSprint1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
