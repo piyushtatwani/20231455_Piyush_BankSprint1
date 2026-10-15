@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TASK3_GUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c61447b3a7f07644f43f1d5aae7d94dd542cb3d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TASK3_GUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TASK3_GUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -21,3 +21,4 @@ D:\20231455_Piyush_BankSprint1\TASK3_GUI\obj\Debug\net10.0-windows\refint\TASK3_
 D:\20231455_Piyush_BankSprint1\TASK3_GUI\obj\Debug\net10.0-windows\TASK3_GUI.pdb
 D:\20231455_Piyush_BankSprint1\TASK3_GUI\obj\Debug\net10.0-windows\TASK3_GUI.genruntimeconfig.cache
 D:\20231455_Piyush_BankSprint1\TASK3_GUI\obj\Debug\net10.0-windows\ref\TASK3_GUI.dll
+D:\20231455_Piyush_BankSprint1\TASK3_GUI\obj\Debug\net10.0-windows\TASK3_GUI.sourcelink.json

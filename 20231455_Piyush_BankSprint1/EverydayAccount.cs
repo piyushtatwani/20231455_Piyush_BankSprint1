@@ -14,8 +14,8 @@ namespace BankSprint1
         {
             if (amount <= 0)
             {
-                lastTransactionStatus = "Invalid Withdrawal Amount";
-                return;
+                lastTransactionStatus = "Invalid Withdrawal Amount: Amount must be greater than zero.";
+                throw new BankingException(lastTransactionStatus, accountName, BankingErrorType.InvalidAmount);
             }
 
             if (balance >= amount)
@@ -26,7 +26,8 @@ namespace BankSprint1
             else
             {
                 // No overdraft allowed, no fees
-                lastTransactionStatus = "Insufficient Funds. No Overdraft Allowed.";
+                lastTransactionStatus = $"[Everyday Account] Insufficient funds. Attempted withdrawal of ${amount:F2} exceeds available balance of ${balance:F2}. Everyday accounts do not permit overdraft.";
+                throw new InsufficientFundsException(lastTransactionStatus, accountName, amount, balance);
             }
         }
     }

@@ -35,7 +35,8 @@ namespace BankSprint1
             }
             else
             {
-                lastTransactionStatus = "Invalid Deposit Amount";
+                lastTransactionStatus = "Invalid Deposit Amount: Deposit must be greater than zero.";
+                throw new BankingException(lastTransactionStatus, accountName, BankingErrorType.InvalidAmount);
             }
         }
 

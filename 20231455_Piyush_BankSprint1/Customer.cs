@@ -12,8 +12,8 @@ namespace BankSprint1
 
         // Public properties
         public int CustomerNumber { get { return customerNumber; } }
-        public string Name { get { return name; } }
-        public string ContactDetails { get { return contactDetails; } }
+        public string Name { get { return name; } set { name = value; } }
+        public string ContactDetails { get { return contactDetails; } set { contactDetails = value; } }
         public List<Account> Accounts { get { return accounts; } }
 
         public Customer(int custNum, string custName, string contact)
@@ -31,7 +31,20 @@ namespace BankSprint1
             };
         }
 
+        // Method to update customer contact details
+        public void UpdateDetails(string newName, string newContact)
+        {
+            name = newName;
+            contactDetails = newContact;
+        }
+
         // Abstract method to be overridden by child classes to calculate transaction fees
         public abstract double CalculateFee(double baseFee);
+
+        public override string ToString()
+        {
+            string type = this is BankStaff ? "Staff" : "Regular";
+            return $"[{customerNumber}] {name} ({type})";
+        }
     }
 }

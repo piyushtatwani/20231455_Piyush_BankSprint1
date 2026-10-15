@@ -12,3 +12,4 @@ D:\20231455_Piyush_BankSprint1\20231455_Piyush_BankSprint1\obj\Debug\net10.0\ref
 D:\20231455_Piyush_BankSprint1\20231455_Piyush_BankSprint1\obj\Debug\net10.0\20231455_Piyush_BankSprint1.pdb
 D:\20231455_Piyush_BankSprint1\20231455_Piyush_BankSprint1\obj\Debug\net10.0\20231455_Piyush_BankSprint1.genruntimeconfig.cache
 D:\20231455_Piyush_BankSprint1\20231455_Piyush_BankSprint1\obj\Debug\net10.0\ref\20231455_Piyush_BankSprint1.dll
+D:\20231455_Piyush_BankSprint1\20231455_Piyush_BankSprint1\obj\Debug\net10.0\20231455_Piyush_BankSprint1.sourcelink.json

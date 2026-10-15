@@ -19,8 +19,8 @@ namespace BankSprint1
         {
             if (amount <= 0)
             {
-                lastTransactionStatus = "Invalid Withdrawal Amount";
-                return;
+                lastTransactionStatus = "Invalid Withdrawal Amount: Amount must be greater than zero.";
+                throw new BankingException(lastTransactionStatus, accountName, BankingErrorType.InvalidAmount);
             }
 
             if (balance + overdraftLimit >= amount)
@@ -32,8 +32,10 @@ namespace BankSprint1
             {
                 // Charge fee if withdrawal exceeds balance + overdraft
                 double fee = AccountOwner.CalculateFee(failedTransactionFee);
+                double originalBalance = balance;
                 balance -= fee;
-                lastTransactionStatus = $"Insufficient Funds and Overdraft Exceeded. Failed Transaction Fee of ${fee} charged.";
+                lastTransactionStatus = $"[Omni Account] Overdraft limit exceeded. Attempted withdrawal of ${amount:F2} exceeds available balance (${originalBalance:F2}) plus ${overdraftLimit:F2} overdraft limit. A failed transaction fee of ${fee:F2} has been charged.";
+                throw new OverdraftLimitExceededException(lastTransactionStatus, accountName, amount, originalBalance, overdraftLimit);
             }
         }
 

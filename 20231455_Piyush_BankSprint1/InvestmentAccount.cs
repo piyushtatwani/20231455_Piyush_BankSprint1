@@ -17,8 +17,8 @@ namespace BankSprint1
         {
             if (amount <= 0)
             {
-                lastTransactionStatus = "Invalid Withdrawal Amount";
-                return;
+                lastTransactionStatus = "Invalid Withdrawal Amount: Amount must be greater than zero.";
+                throw new BankingException(lastTransactionStatus, accountName, BankingErrorType.InvalidAmount);
             }
 
             if (balance >= amount)
@@ -28,10 +28,12 @@ namespace BankSprint1
             }
             else
             {
-                // No overdraft allowed, but charge fixed fee based on customer type
+                // No overdraft allowed, charge fixed fee based on customer type
                 double fee = AccountOwner.CalculateFee(failedTransactionFee);
+                double originalBalance = balance;
                 balance -= fee;
-                lastTransactionStatus = $"Insufficient Funds. Failed Transaction Fee of ${fee} charged.";
+                lastTransactionStatus = $"[Investment Account] Insufficient funds. Attempted withdrawal of ${amount:F2} exceeds available balance of ${originalBalance:F2}. A failed transaction fee of ${fee:F2} has been charged.";
+                throw new InsufficientFundsException(lastTransactionStatus, accountName, amount, originalBalance);
             }
         }
 
